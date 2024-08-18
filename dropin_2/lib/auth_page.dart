@@ -1,0 +1,104 @@
+import 'package:flutter/material.dart';
+
+class AuthPage extends StatefulWidget {
+  @override
+  _AuthPageState createState() => _AuthPageState();
+}
+
+class _AuthPageState extends State<AuthPage> {
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color.fromRGBO(51, 0, 111, 1.0), // Background color
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color.fromRGBO(51, 0, 111, 1.0), // AppBar background color
+        title: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 100.0), // Space from top of AppBar
+              child: Container(
+                margin: EdgeInsets.only(top: 20), // Space between image and title
+                child: Image.asset(
+                  '/Users/rohanpuri/Desktop/uwSoccer/dropin_2/lib/images/86CBE9CF-1A32-4F2B-A3EE-076B1CE78DA3.jpeg', // Path to your image
+                  width: 125, // Adjust width
+                  height: 125, // Adjust height
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 15.0), // Space between image and title
+              child: Text(
+                'UWB Soccer Drop-In', // Title text
+                style: TextStyle(
+                  fontFamily: 'Roboto',
+                  color: Colors.white, // Title color
+                  fontSize: 30, // Title font size
+                ),
+              ),
+            ),
+          ],
+        ),
+        centerTitle: true, // Center title horizontally
+        toolbarHeight: 300, // Set height for AppBar
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0), // Horizontal padding
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 25.0), // Space from top of the screen
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start, // Align column to start (top)
+              crossAxisAlignment: CrossAxisAlignment.stretch, // Stretch horizontally
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(bottom: 16.0), // Space between TextFields
+                  child: TextField(
+                    controller: _usernameController,
+                    decoration: InputDecoration(
+                      labelText: 'UW email (eg. doejohn2@uw.edu)',
+                      fillColor: Colors.white, // TextField background color
+                      filled: true,
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 20.0), // Space between TextField and button
+                  child: TextField(
+                    controller: _passwordController,
+                    decoration: InputDecoration(
+                      labelText: 'Password',
+                      fillColor: Colors.white, // TextField background color
+                      filled: true,
+                    ),
+                    obscureText: true,
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: _authenticate,
+                  child: Text(
+                    'Login',
+                    style: TextStyle(color: Colors.white), // Text color
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromRGBO(0, 0, 0, 1), // Button color
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _authenticate() {
+    final username = _usernameController.text;
+    final password = _passwordController.text;
+    print('Username: $username');
+    print('Password: $password');
+  }
+}
