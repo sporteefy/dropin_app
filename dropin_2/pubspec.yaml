@@ -62,8 +62,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - /Users/rohanpuri/Desktop/uwSoccer/dropin_2/lib/images/86CBE9CF-1A32-4F2B-A3EE-076B1CE78DA3.jpeg
-    - /Users/rohanpuri/Desktop/uwSoccer/dropin_2/lib/images/211246E3-1E38-46DC-921D-25902AFD9B33_4_5005_c.jpeg
+    - /Users/rohanpuri/Documents/GitHub/dropin_app/dropin_2/lib/images/211246E3-1E38-46DC-921D-25902AFD9B33_4_5005_c.jpeg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
