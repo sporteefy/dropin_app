@@ -23,7 +23,7 @@ class _AuthPageState extends State<AuthPage> {
               child: Container(
                 margin: EdgeInsets.only(top: 20), // Space between image and title
                 child: Image.asset(
-                  '/Users/rohanpuri/Desktop/uwSoccer/dropin_2/lib/images/86CBE9CF-1A32-4F2B-A3EE-076B1CE78DA3.jpeg', // Path to your image
+                  '/Users/rohanpuri/Documents/GitHub/dropin_app/lib/images/211246E3-1E38-46DC-921D-25902AFD9B33_4_5005_c.jpeg', // Path to your image
                   width: 125, // Adjust width
                   height: 125, // Adjust height
                 ),
