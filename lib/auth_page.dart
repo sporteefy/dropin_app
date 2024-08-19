@@ -96,13 +96,32 @@ class _AuthPageState extends State<AuthPage> {
             ),
             Padding(
               padding: EdgeInsets.fromLTRB(0, 0, 0, 230), // Padding at the bottom
-              child: Text(
-                'Or Continue With...', // Text at the bottom
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Divider(
+                      color: Colors.white, // Line color
+                      thickness: 1, // Line thickness
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0), // Space between lines and text
+                    child: Text(
+                      'Or Continue With...', // Text at the bottom
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Divider(
+                      color: Colors.white, // Line color
+                      thickness: 1, // Line thickness
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
