@@ -63,6 +63,7 @@ flutter:
 
   assets:
     - /Users/rohanpuri/Documents/GitHub/dropin_app/lib/images/211246E3-1E38-46DC-921D-25902AFD9B33_4_5005_c.jpeg
+    - /Users/rohanpuri/Documents/GitHub/dropin_app/lib/images/googlelogo.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

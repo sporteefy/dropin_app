@@ -22,10 +22,14 @@ class _AuthPageState extends State<AuthPage> {
               padding: const EdgeInsets.only(top: 100.0), // Space from top of AppBar
               child: Container(
                 margin: EdgeInsets.only(top: 20), // Space between image and title
-                child: Image.asset(
-                  '/Users/rohanpuri/Documents/GitHub/dropin_app/lib/images/211246E3-1E38-46DC-921D-25902AFD9B33_4_5005_c.jpeg', // Path to your image
-                  width: 125, // Adjust width
-                  height: 125, // Adjust height
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15), // Rounded corners
+                  child: Image.asset(
+                    '/Users/rohanpuri/Documents/GitHub/dropin_app/lib/images/211246E3-1E38-46DC-921D-25902AFD9B33_4_5005_c.jpeg', // Path to your image
+                    width: 140, // Adjust width
+                    height: 140, // Adjust height
+                    fit: BoxFit.cover, // Ensure image covers the container
+                  ),
                 ),
               ),
             ),
@@ -48,7 +52,6 @@ class _AuthPageState extends State<AuthPage> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0), // Horizontal padding
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween, // Align elements with space between
           crossAxisAlignment: CrossAxisAlignment.stretch, // Stretch horizontally
           children: <Widget>[
             Column(
@@ -94,8 +97,9 @@ class _AuthPageState extends State<AuthPage> {
                 ),
               ],
             ),
+            // Divider section
             Padding(
-              padding: EdgeInsets.fromLTRB(0, 0, 0, 230), // Padding at the bottom
+              padding: const EdgeInsets.only(top: 10.0, bottom: 20.0), // Adjust padding as needed
               child: Row(
                 children: [
                   Expanded(
@@ -122,6 +126,25 @@ class _AuthPageState extends State<AuthPage> {
                     ),
                   ),
                 ],
+              ),
+            ),
+            // Square tile section below the divider
+            Center(
+              child: Container(
+                width: 80, // Fixed width for the square tile
+                height: 80, // Fixed height for the square tile
+                decoration: BoxDecoration(
+                  color: Colors.white, // Tile background color
+                  shape: BoxShape.rectangle, // Keep the shape square
+                  borderRadius: BorderRadius.circular(15), // Optional rounded corners
+                ),
+                child: Center(
+                  child: Image.asset(
+                    '/Users/rohanpuri/Documents/GitHub/dropin_app/lib/images/googlelogo.png', // Replace with the path to your image
+                    width: 50, // Adjust width of the image
+                    height: 50, // Adjust height of the image
+                  ),
+                ),
               ),
             ),
           ],
