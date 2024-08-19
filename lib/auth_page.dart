@@ -47,15 +47,14 @@ class _AuthPageState extends State<AuthPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0), // Horizontal padding
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 25.0), // Space from top of the screen
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start, // Align column to start (top)
-              crossAxisAlignment: CrossAxisAlignment.stretch, // Stretch horizontally
-              children: <Widget>[
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween, // Align elements with space between
+          crossAxisAlignment: CrossAxisAlignment.stretch, // Stretch horizontally
+          children: <Widget>[
+            Column(
+              children: [
                 Container(
-                  margin: EdgeInsets.only(bottom: 16.0), // Space between TextFields
+                  margin: EdgeInsets.only(top: 25.0, bottom: 16.0), // Space from top of the screen and between TextFields
                   child: TextField(
                     controller: _usernameController,
                     decoration: InputDecoration(
@@ -64,7 +63,7 @@ class _AuthPageState extends State<AuthPage> {
                       filled: true,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
-                      )
+                      ),
                     ),
                   ),
                 ),
@@ -78,7 +77,7 @@ class _AuthPageState extends State<AuthPage> {
                       filled: true,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
-                      )
+                      ),
                     ),
                     obscureText: true,
                   ),
@@ -95,7 +94,18 @@ class _AuthPageState extends State<AuthPage> {
                 ),
               ],
             ),
-          ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 230), // Padding at the bottom
+              child: Text(
+                'Or Sign in With...', // Text at the bottom
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
