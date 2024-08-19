@@ -97,7 +97,7 @@ class _AuthPageState extends State<AuthPage> {
             Padding(
               padding: EdgeInsets.fromLTRB(0, 0, 0, 230), // Padding at the bottom
               child: Text(
-                'Or Sign in With...', // Text at the bottom
+                'Or Continue With...', // Text at the bottom
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
