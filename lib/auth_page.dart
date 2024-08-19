@@ -62,6 +62,9 @@ class _AuthPageState extends State<AuthPage> {
                       labelText: 'UW email (eg. doejohn2@uw.edu)',
                       fillColor: Colors.white, // TextField background color
                       filled: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      )
                     ),
                   ),
                 ),
@@ -73,6 +76,9 @@ class _AuthPageState extends State<AuthPage> {
                       labelText: 'Password',
                       fillColor: Colors.white, // TextField background color
                       filled: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      )
                     ),
                     obscureText: true,
                   ),
